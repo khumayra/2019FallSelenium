@@ -18,7 +18,7 @@ public class NestedFrame {
         driver.switchTo().frame("frame-top");
         driver.switchTo().frame("frame-middle");
 
-        WebElement content = driver.findElement(By.id("content"));
+        WebElement content = driver.findElement(By.xpath("//div[text()='MIDDLE']"));
         System.out.println(content.getText());
 
         driver.switchTo().parentFrame(); //go to the top frame
